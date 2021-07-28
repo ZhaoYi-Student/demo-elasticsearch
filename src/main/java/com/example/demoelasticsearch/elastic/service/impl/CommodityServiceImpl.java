@@ -43,7 +43,7 @@ public class CommodityServiceImpl implements CommonService<Commodity> {
     public int save(Commodity target) {
         try {
             Commodity save = commodityRepository.save(target);
-            log.info("save is success : {}", save);
+            log.info("save is success : {}", GsonUtil.toJson(save));
             return 1;
         } catch (Exception e) {
             log.info("save is failed");
@@ -57,7 +57,7 @@ public class CommodityServiceImpl implements CommonService<Commodity> {
     public int saveAll(List<Commodity> targets) {
         try {
             commodityRepository.saveAll(targets);
-            log.info("saveAll is success : {}", targets);
+            log.info("saveAll is success : {}", targets.size());
             return targets.size();
         } catch (Exception e) {
             log.info("saveAll is failed");
@@ -80,7 +80,7 @@ public class CommodityServiceImpl implements CommonService<Commodity> {
     public int del(Commodity target) {
         try {
             commodityRepository.delete(target);
-            log.info("del is success : {}", target);
+            log.info("del is success : {}", GsonUtil.toJson(target));
             return 1;
         } catch (Exception e) {
             e.printStackTrace();
