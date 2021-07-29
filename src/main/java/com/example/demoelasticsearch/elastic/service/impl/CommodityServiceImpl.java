@@ -5,7 +5,6 @@ import com.example.demoelasticsearch.elastic.service.CommonService;
 import com.example.demoelasticsearch.pojo.Commodity;
 import com.example.demoelasticsearch.util.GsonUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
